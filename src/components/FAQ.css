@@ -1,0 +1,131 @@
+.faq-section {
+  background-color: #f8fafc;
+  padding: 100px 0;
+  color: #1e293b;
+}
+
+.faq-section .section-label {
+  color: var(--primary-red);
+}
+
+.faq-section .section-title {
+  color: #0f172a;
+}
+
+.faq-section .section-subtitle {
+  color: #64748b;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.faq-left {
+  position: sticky;
+  top: 100px;
+}
+
+.faq-left .section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-red);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.faq-left .section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.faq-left .section-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.faq-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.faq-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: left;
+  gap: 16px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.faq-trigger:hover {
+  color: var(--primary-red);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: #94a3b8;
+  transition: transform var(--transition-normal);
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+  color: var(--primary-red);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding-bottom: 20px;
+}
+
+.faq-answer p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .faq-left {
+    position: static;
+  }
+}

@@ -1,0 +1,150 @@
+.hero-section {
+  padding: 28px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Live Pill — must wrap, never overflow */
+.live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.9);
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;      /* Allow wrapping */
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+/* Hero Title — fluid sizing */
+.hero-title {
+  font-size: clamp(1.7rem, 6vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.text-gradient { color: var(--primary-red); }
+
+.hero-subtitle {
+  font-size: clamp(0.88rem, 3vw, 1rem);
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 100%;
+}
+
+/* Action Buttons */
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.hero-actions .btn {
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.btn-lg {
+  padding: 14px 24px;
+  font-size: 0.95rem;
+}
+
+.text-red { color: #ff4d4d; }
+.text-yellow { color: #eab308; }
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Stats Box */
+.stats-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-top: 4px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.stat-item { text-align: center; flex: 1; }
+
+.stat-item h3 {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  color: #ff4d4d;
+  font-weight: 700;
+}
+
+.stat-item p {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  background-color: var(--glass-border);
+  align-self: stretch;
+}
+
+/* =====================
+   MOBILE (< 480px)
+   ===================== */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.5rem, 7.5vw, 1.9rem);
+    letter-spacing: -0.3px;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .stats-box {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+  }
+  .stat-item {
+    min-width: 40%;
+  }
+  .stat-divider {
+    display: none;
+  }
+  .trust-badges {
+    gap: 8px;
+  }
+  .badge {
+    font-size: 0.75rem;
+  }
+}

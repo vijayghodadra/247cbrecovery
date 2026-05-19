@@ -1,0 +1,50 @@
+.topbar {
+  background-color: var(--bg-topbar);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.9);
+  overflow: hidden;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.text-red-light { color: #ffb3b3; }
+.separator { color: rgba(255,255,255,0.3); }
+.highlight { font-weight: 600; color: white; }
+.font-bold { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .topbar-right { display: none; }
+  .topbar-content { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .topbar { font-size: 0.72rem; padding: 5px 0; }
+  .topbar-left { justify-content: center; width: 100%; }
+  /* Hide all but the phone number */
+  .topbar-left .topbar-item:not(:first-child),
+  .topbar-left .separator {
+    display: none;
+  }
+}

@@ -1,0 +1,75 @@
+/* =========================================
+   INFO STRIP — Gold Ticker Between Sections
+   ========================================= */
+
+.info-strip {
+  background-color: #d4a017;
+  overflow: hidden;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Scrolling container */
+.info-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+  white-space: nowrap;
+}
+
+.info-strip:hover .info-strip-inner {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Each item */
+.info-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.info-strip-icon {
+  display: flex;
+  align-items: center;
+  color: #5a2d00;
+  flex-shrink: 0;
+}
+
+/* Separator */
+.info-strip-sep {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Mobile: smaller text, faster scroll */
+@media (max-width: 640px) {
+  .info-strip-item {
+    font-size: 0.77rem;
+    padding: 0 14px;
+  }
+  .info-strip {
+    padding: 8px 0;
+  }
+  .info-strip-inner {
+    animation-duration: 20s;
+  }
+}

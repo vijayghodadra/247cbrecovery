@@ -1,0 +1,219 @@
+/* =====================
+   EMERGENCY BOOKING
+   ===================== */
+.eb-section {
+  background: linear-gradient(135deg, #151929 0%, #0f1320 100%);
+  padding: 80px 0;
+  color: white;
+}
+
+.eb-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.eb-badge {
+  display: inline-block;
+  background-color: var(--primary-red);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.eb-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.eb-highlight { color: var(--primary-red); }
+.eb-subtitle { font-size: 0.95rem; color: rgba(255,255,255,0.5); }
+
+/* Two Column Layout */
+.eb-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Form Card */
+.eb-form-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.eb-form-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+.eb-form-icon { color: #fbbf24; margin-top: 2px; flex-shrink: 0; }
+.eb-form-heading h3 { font-size: 1.15rem; font-weight: 700; color: white; margin-bottom: 3px; }
+.eb-form-heading p { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+
+.eb-form { display: flex; flex-direction: column; gap: 14px; }
+
+.eb-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.eb-form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.eb-form-group label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.5); }
+
+.eb-form-group input,
+.eb-form-group select,
+.eb-form-group textarea {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 11px 13px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+  resize: vertical;
+  /* iOS fix: prevent zoom on focus */
+  font-size: 16px;
+}
+
+.eb-form-group input:focus,
+.eb-form-group select:focus,
+.eb-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+.eb-form-group input::placeholder,
+.eb-form-group textarea::placeholder { color: rgba(148,163,184,0.35); }
+
+.eb-form-group select { cursor: pointer; appearance: auto; }
+.eb-form-group select option { background: #1e2132; color: white; }
+
+/* Buttons */
+.eb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  margin-top: 4px;
+  min-height: 52px;
+}
+
+.eb-btn-submit {
+  background-color: var(--primary-red);
+  color: white;
+  box-shadow: 0 4px 14px rgba(201,42,42,0.35);
+}
+
+.eb-btn-submit:hover, .eb-btn-submit:active {
+  background-color: var(--primary-red-hover);
+  transform: translateY(-2px);
+}
+
+.eb-btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.25);
+}
+
+.eb-btn-whatsapp:hover, .eb-btn-whatsapp:active {
+  background-color: #1ebe5a;
+  transform: translateY(-2px);
+}
+
+/* Why Column */
+.eb-why { display: flex; flex-direction: column; gap: 16px; }
+.eb-why-title { font-size: 1.2rem; font-weight: 700; color: white; }
+
+.eb-why-list { display: flex; flex-direction: column; gap: 10px; }
+
+.eb-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px;
+  transition: border-color var(--transition-fast);
+}
+
+.eb-why-item:hover { border-color: rgba(201,42,42,0.3); }
+
+.eb-why-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eb-why-item h4 { font-size: 0.9rem; font-weight: 700; color: white; margin-bottom: 3px; }
+.eb-why-item p { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+.eb-whatsapp-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(37,211,102,0.08);
+  border: 1px solid rgba(37,211,102,0.2);
+  border-radius: 10px;
+  padding: 13px 14px;
+}
+
+.eb-wa-icon { color: #25d366; flex-shrink: 0; margin-top: 1px; }
+.eb-wa-label { font-size: 0.88rem; font-weight: 700; color: #25d366; margin-bottom: 2px; }
+.eb-wa-sub { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+.eb-phone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background-color: var(--primary-red);
+  color: white;
+  border-radius: 10px;
+  padding: 18px 20px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 16px rgba(201,42,42,0.35);
+  min-height: 60px;
+}
+
+.eb-phone-btn:hover, .eb-phone-btn:active {
+  background-color: var(--primary-red-hover);
+  transform: translateY(-2px);
+}
+
+.eb-phone-number { display: block; font-size: 1.3rem; font-weight: 800; letter-spacing: 0.5px; }
+.eb-phone-sub { display: block; font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 1024px) {
+  .eb-layout { grid-template-columns: 1fr; }
+  .eb-title { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .eb-form-row { grid-template-columns: 1fr; }
+  .eb-form-card { padding: 20px; }
+  .eb-section { padding: 60px 0; }
+  .eb-title { font-size: 1.8rem; }
+}

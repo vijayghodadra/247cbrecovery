@@ -1,0 +1,46 @@
+/* =====================
+   MAIN GRID
+   ===================== */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: 32px 0;
+  align-items: start;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+}
+
+/* =====================
+   FLOATING WHATSAPP
+   ===================== */
+.floating-whatsapp {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: 16px;
+  background-color: #25d366;
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  z-index: 150;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:active {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}

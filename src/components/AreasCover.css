@@ -1,0 +1,115 @@
+.areas-section {
+  background-color: #f8fafc;
+  padding: 72px 0;
+  color: #1e293b;
+  overflow: hidden;
+}
+
+.areas-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 32px;
+  padding: 0 8px;
+}
+
+.areas-badge {
+  display: inline-block;
+  background-color: #fef2f2;
+  color: var(--primary-red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.areas-title {
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.areas-highlight { color: var(--primary-red); }
+
+.areas-subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+/* Home Base Pill */
+.home-base-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-red);
+  color: white;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.home-base-tag {
+  background-color: rgba(255,255,255,0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.77rem;
+  font-weight: 500;
+}
+
+.regions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.region-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.region-label {
+  display: inline-block;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.cities-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.city-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.87rem;
+  color: #334155;
+  padding: 5px 0;
+  transition: color var(--transition-fast);
+}
+
+.city-tag:hover { color: var(--primary-red); }
+.city-pin { color: var(--primary-red); flex-shrink: 0; }
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 480px) {
+  .areas-section { padding: 56px 0; }
+  .city-tag { font-size: 0.82rem; }
+  .home-base-pill { font-size: 0.85rem; }
+}

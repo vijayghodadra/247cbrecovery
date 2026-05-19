@@ -1,0 +1,148 @@
+.services-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.media-placeholder {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 250px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-truck-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.media-placeholder:hover .hero-truck-img {
+  transform: scale(1.03);
+}
+
+.media-content {
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.picture-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.services-list-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  min-height: 36px;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-wrapper {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.solid-green {
+  background-color: var(--success-green);
+}
+
+.outline-red {
+  border: 2px solid var(--primary-red);
+}
+
+.chevron {
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.chevron.rotated {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 100px;
+  padding-bottom: 12px;
+}
+
+.bottom-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(201, 42, 42, 0.9);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.avg-response {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+}
+
+.phone-btn {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.phone-btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
