@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Zap, ShieldCheck, DollarSign, PhoneCall } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './WhyChooseUs.css';
 
 const features = [
@@ -37,6 +38,8 @@ const stats = [
 ];
 
 const WhyChooseUs = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <section id="why-choose-us" className="why-section">
       <div className="container">
@@ -45,7 +48,7 @@ const WhyChooseUs = () => {
           {/* Left: Image */}
           <div className="why-image-wrap">
             <img
-              src="/why-truck.jpeg"
+              src={settings.images.whyTruck}
               alt="Trusted Vehicle Recovery Team"
               className="why-image"
               loading="lazy"
@@ -95,3 +98,4 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+

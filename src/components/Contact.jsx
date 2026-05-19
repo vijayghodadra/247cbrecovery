@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Phone, Mail, MapPin, Clock, PhoneCall } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './Contact.css';
 
 const Contact = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <section id="contact" className="contact-section">
       <div className="container">
@@ -24,7 +27,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="contact-label">Emergency Phone</p>
-                  <a href="tel:07438189791" className="contact-value">07438 189791</a>
+                  <a href={`tel:${settings.phoneRaw}`} className="contact-value">{settings.phone}</a>
                 </div>
               </div>
 
@@ -110,3 +113,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

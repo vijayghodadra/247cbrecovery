@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -15,14 +15,23 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import TrustSecurity from './components/TrustSecurity';
 import Footer from './components/Footer';
+import AdminPanel from './components/AdminPanel';
+import { SettingsContext } from './context/SettingsContext';
 import { MessageCircle } from 'lucide-react';
 import './App.css';
 
 function App() {
+  const { settings } = useContext(SettingsContext);
+  const [isAdminView, setIsAdminView] = useState(false);
+
+  if (isAdminView) {
+    return <AdminPanel onClose={() => setIsAdminView(false)} />;
+  }
+
   return (
     <div className="app-container">
       <TopBar />
-      <Header />
+      <Header setIsAdminView={setIsAdminView} />
 
       {/* Section 1: Hero */}
       <main className="container main-grid">
@@ -72,7 +81,7 @@ function App() {
 
       {/* Floating WhatsApp */}
       <a
-        href="https://wa.me/447438189791"
+        href={`https://wa.me/${settings.whatsapp}`}
         target="_blank"
         rel="noopener noreferrer"
         className="floating-whatsapp"
@@ -85,3 +94,4 @@ function App() {
 }
 
 export default App;
+

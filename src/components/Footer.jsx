@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Phone, Mail, MapPin, Share2, MessageSquare, Heart } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './Footer.css';
 
 const Footer = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <footer className="footer">
       <div className="container">
@@ -58,7 +61,7 @@ const Footer = () => {
             <div className="footer-contact-list">
               <div className="footer-contact-item">
                 <Phone size={16} />
-                <a href="tel:07438189791">07438 189791</a>
+                <a href={`tel:${settings.phoneRaw}`}>{settings.phone}</a>
               </div>
               <div className="footer-contact-item">
                 <Mail size={16} />
@@ -71,7 +74,7 @@ const Footer = () => {
             </div>
             <div className="footer-emergency">
               <p>🚨 24/7 Emergency</p>
-              <a href="tel:07438189791" className="btn btn-primary emergency-footer-btn">
+              <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary emergency-footer-btn">
                 Call Now
               </a>
             </div>
@@ -92,3 +95,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

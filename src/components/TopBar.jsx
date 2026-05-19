@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { AlertCircle, MapPin, Phone } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './TopBar.css';
 
 const TopBar = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <div className="topbar">
       <div className="container topbar-content">
@@ -29,7 +32,7 @@ const TopBar = () => {
           <span className="separator">|</span>
           <div className="topbar-item font-bold">
             <Phone size={14} className="text-red-light" />
-            <span>07438 189791</span>
+            <span>{settings.phone}</span>
           </div>
         </div>
       </div>
@@ -38,3 +41,4 @@ const TopBar = () => {
 };
 
 export default TopBar;
+

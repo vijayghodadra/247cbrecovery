@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PhoneCall, ShieldCheck, Star, Activity, MapPin } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './Hero.css';
 
 const Hero = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <div className="hero-section">
       {/* Live Status */}
@@ -27,17 +30,17 @@ const Hero = () => {
       {/* Actions */}
       <div className="hero-actions">
         <a
-          href="tel:07438189791"
+          href={`tel:${settings.phoneRaw}`}
           className="btn btn-primary btn-lg"
-          aria-label="Call now — 07438 189791"
+          aria-label={`Call now — ${settings.phone}`}
         >
           <PhoneCall size={20} />
           <span>Call Now — Free</span>
         </a>
         <a
-          href="tel:07438189791"
+          href={`tel:${settings.phoneRaw}`}
           className="btn btn-outline btn-lg"
-          aria-label="Get emergency help — 07438 189791"
+          aria-label={`Get emergency help — ${settings.phone}`}
         >
           <ShieldCheck size={20} className="text-red" />
           <span>Get Emergency Help</span>
@@ -86,3 +89,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

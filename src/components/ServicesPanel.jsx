@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { ChevronRight, Wrench, AlertTriangle, Disc, Zap, Navigation, BatteryCharging, PhoneCall } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './ServicesPanel.css';
 
 const servicesList = [
@@ -12,6 +13,7 @@ const servicesList = [
 ];
 
 const ServicesPanel = () => {
+  const { settings } = useContext(SettingsContext);
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const toggleAccordion = (id) => {
@@ -23,7 +25,7 @@ const ServicesPanel = () => {
       {/* Hero Image */}
       <div className="media-placeholder">
         <img
-          src="/hero-truck.jpeg"
+          src={settings.images.heroTruck}
           alt="Cambridge Vehicle Recovery — Recovery Truck In Action"
           className="hero-truck-img"
         />
@@ -65,9 +67,9 @@ const ServicesPanel = () => {
         {/* Bottom Action Bar */}
         <div className="bottom-action-bar">
           <span className="avg-response">⏱ Avg. Response: 15-30 Mins</span>
-          <button className="btn btn-primary phone-btn">
-            <PhoneCall size={16} /> 07438 189791
-          </button>
+          <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary phone-btn">
+            <PhoneCall size={16} /> {settings.phone}
+          </a>
         </div>
       </div>
     </div>
@@ -75,3 +77,4 @@ const ServicesPanel = () => {
 };
 
 export default ServicesPanel;
+

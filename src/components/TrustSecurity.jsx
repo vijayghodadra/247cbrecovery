@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ShieldCheck, Lock, CreditCard, FileText, User, LogIn } from 'lucide-react';
+import PaymentModal from './PaymentModal';
 import './TrustSecurity.css';
 
 const encryptedItems = [
@@ -11,6 +12,8 @@ const encryptedItems = [
 ];
 
 const TrustSecurity = () => {
+  const [isPayModalOpen, setIsPayModalOpen] = useState(false);
+
   return (
     <section className="trust-section">
       <div className="container">
@@ -84,12 +87,17 @@ const TrustSecurity = () => {
             </div>
 
             <div className="worldpay-cards">
-              <span className="card-chip">VISA</span>
-              <span className="card-chip">Mastercard</span>
-              <span className="card-chip">Amex</span>
-              <span className="card-chip">Apple Pay</span>
-              <span className="card-chip">Google Pay</span>
+              <span className="card-chip clickable" onClick={() => setIsPayModalOpen(true)}>VISA</span>
+              <span className="card-chip clickable" onClick={() => setIsPayModalOpen(true)}>Mastercard</span>
+              <span className="card-chip clickable" onClick={() => setIsPayModalOpen(true)}>Amex</span>
+              <span className="card-chip clickable" onClick={() => setIsPayModalOpen(true)}>Apple Pay</span>
+              <span className="card-chip clickable" onClick={() => setIsPayModalOpen(true)}>Google Pay</span>
             </div>
+
+            <button className="worldpay-pay-btn" onClick={() => setIsPayModalOpen(true)}>
+              <CreditCard size={16} />
+              <span>Pay Securely Online</span>
+            </button>
           </div>
 
           {/* Divider */}
@@ -131,8 +139,15 @@ const TrustSecurity = () => {
 
         </div>
       </div>
+
+      <PaymentModal
+        isOpen={isPayModalOpen}
+        onClose={() => setIsPayModalOpen(false)}
+        defaultAmount={150}
+      />
     </section>
   );
 };
 
 export default TrustSecurity;
+

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Zap, ShieldCheck, DollarSign, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './EmergencyBooking.css';
 
 const whyFeatures = [
@@ -30,6 +31,8 @@ const whyFeatures = [
 ];
 
 const EmergencyBooking = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <section id="emergency-booking" className="eb-section">
       <div className="container">
@@ -113,7 +116,7 @@ const EmergencyBooking = () => {
               </button>
 
               <a
-                href="https://wa.me/447438189791"
+                href={`https://wa.me/${settings.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="eb-btn eb-btn-whatsapp"
@@ -152,10 +155,10 @@ const EmergencyBooking = () => {
             </div>
 
             {/* Big Phone Button */}
-            <a href="tel:07438189791" className="eb-phone-btn">
+            <a href={`tel:${settings.phoneRaw}`} className="eb-phone-btn">
               <Phone size={20} />
               <div>
-                <span className="eb-phone-number">07438 189791</span>
+                <span className="eb-phone-number">{settings.phone}</span>
                 <span className="eb-phone-sub">Free call — available 24/7</span>
               </div>
             </a>
@@ -168,3 +171,4 @@ const EmergencyBooking = () => {
 };
 
 export default EmergencyBooking;
+

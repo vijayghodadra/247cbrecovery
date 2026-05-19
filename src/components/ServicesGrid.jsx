@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Check, Phone, MessageCircle } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './ServicesGrid.css';
 
 const servicesData = [
@@ -8,32 +9,40 @@ const servicesData = [
     title: 'Breakdown Recovery',
     icon: '🚛',
     description: 'Fast, reliable 24/7 breakdown recovery across the UK with 15-30 minute response times.',
-    image: '/recovery.jpeg',
   },
   {
     id: 2,
     title: 'Auction & Garage Collection',
     icon: '🏭',
     description: 'Professional vehicle collection from auctions and garages across the UK — fully insured transport.',
-    image: '/collection.jpeg',
   },
   {
     id: 3,
     title: 'Jump Start & Tyre Change',
     icon: '🔋',
     description: 'Fast on-the-spot jump start and tyre change service. We carry a wide range of tyres and equipment.',
-    image: '/tirechange.jpeg',
   },
   {
     id: 4,
     title: 'Classic Car & Special Vehicle',
     icon: '🚘',
     description: 'Specialist handling and transport for classic cars and special vehicles with full care and insurance.',
-    image: '/special.jpeg',
   },
 ];
 
 const ServicesGrid = () => {
+  const { settings } = useContext(SettingsContext);
+
+  const getServiceImage = (id) => {
+    switch (id) {
+      case 1: return settings.images.recovery;
+      case 2: return settings.images.collection;
+      case 3: return settings.images.tirechange;
+      case 4: return settings.images.special;
+      default: return '';
+    }
+  };
+
   return (
     <section className="services-grid-section" id="services">
       <div className="container">
@@ -54,7 +63,7 @@ const ServicesGrid = () => {
             <div key={service.id} className="service-card">
               <div className="service-card-image">
                 <img
-                  src={service.image}
+                  src={getServiceImage(service.id)}
                   alt={service.title}
                   className="service-card-img"
                   loading="lazy"
@@ -73,12 +82,12 @@ const ServicesGrid = () => {
                 </div>
                 <p className="service-desc">{service.description}</p>
                 <div className="card-action-buttons">
-                  <a href="tel:07438189791" className="card-btn card-btn-call">
+                  <a href={`tel:${settings.phoneRaw}`} className="card-btn card-btn-call">
                     <Phone size={15} />
                     Emergency Call
                   </a>
                   <a
-                    href="https://wa.me/447438189791"
+                    href={`https://wa.me/${settings.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="card-btn card-btn-whatsapp"
@@ -97,3 +106,4 @@ const ServicesGrid = () => {
 };
 
 export default ServicesGrid;
+

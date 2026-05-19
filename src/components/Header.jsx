@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { PhoneCall, Menu, X } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './Header.css';
 
 const navLinks = [
@@ -10,7 +11,8 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ];
 
-const Header = () => {
+const Header = ({ setIsAdminView }) => {
+  const { settings } = useContext(SettingsContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
@@ -37,12 +39,17 @@ const Header = () => {
                 <a href={link.href}>{link.label}</a>
               </li>
             ))}
+            <li>
+              <button onClick={() => setIsAdminView(true)} className="nav-admin-btn">
+                Admin
+              </button>
+            </li>
           </ul>
         </nav>
 
         {/* Desktop CTA */}
         <div className="header-actions desktop-cta">
-          <a href="tel:07438189791" className="btn btn-primary emergency-btn">
+          <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary emergency-btn">
             <PhoneCall size={18} />
             <span>Emergency Call</span>
           </a>
@@ -50,7 +57,7 @@ const Header = () => {
 
         {/* Mobile: Call + Hamburger */}
         <div className="mobile-controls">
-          <a href="tel:07438189791" className="mobile-call-btn" aria-label="Call now">
+          <a href={`tel:${settings.phoneRaw}`} className="mobile-call-btn" aria-label="Call now">
             <PhoneCall size={18} />
           </a>
           <button
@@ -73,11 +80,22 @@ const Header = () => {
                 <a href={link.href} onClick={closeMenu}>{link.label}</a>
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => {
+                  closeMenu();
+                  setIsAdminView(true);
+                }}
+                className="mobile-admin-btn"
+              >
+                Admin
+              </button>
+            </li>
           </ul>
         </nav>
-        <a href="tel:07438189791" className="btn btn-primary mobile-menu-cta" onClick={closeMenu}>
+        <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary mobile-menu-cta" onClick={closeMenu}>
           <PhoneCall size={18} />
-          Emergency Call — 07438 189791
+          Emergency Call — {settings.phone}
         </a>
       </div>
 
@@ -88,3 +106,4 @@ const Header = () => {
 };
 
 export default Header;
+

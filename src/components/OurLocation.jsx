@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MapPin, Phone, Clock, Globe } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './OurLocation.css';
 
 const OurLocation = () => {
+  const { settings } = useContext(SettingsContext);
+
   return (
     <section id="location" className="location-section">
       <div className="container">
@@ -52,7 +55,7 @@ const OurLocation = () => {
               </div>
               <div className="location-card-item">
                 <Phone size={16} className="card-icon" />
-                <a href="tel:07438189791">07438 189791</a>
+                <a href={`tel:${settings.phoneRaw}`}>{settings.phone}</a>
               </div>
               <div className="location-card-item">
                 <Clock size={16} className="card-icon" />
@@ -72,3 +75,4 @@ const OurLocation = () => {
 };
 
 export default OurLocation;
+

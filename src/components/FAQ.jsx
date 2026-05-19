@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { SettingsContext } from '../context/SettingsContext';
 import './FAQ.css';
 
 const faqs = [
@@ -36,6 +37,7 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const { settings } = useContext(SettingsContext);
   const [openId, setOpenId] = useState(null);
 
   const toggle = (id) => setOpenId(openId === id ? null : id);
@@ -51,7 +53,7 @@ const FAQ = () => {
               Everything you need to know about our recovery services. Can't find your answer?
               Call us directly — we're always here to help.
             </p>
-            <a href="tel:07438189791" className="btn btn-primary faq-cta-btn">
+            <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary faq-cta-btn">
               📞 Call Us Now
             </a>
           </div>
@@ -79,3 +81,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
