@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Zap, ShieldCheck, DollarSign, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
 import './EmergencyBooking.css';
@@ -32,6 +32,44 @@ const whyFeatures = [
 
 const EmergencyBooking = () => {
   const { settings } = useContext(SettingsContext);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    pickup: '',
+    destination: '',
+    vehicle: '',
+    service: '',
+    notes: ''
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    // Map id like 'eb-name' to key 'name'
+    const key = id.replace('eb-', '');
+    setFormData((prev) => ({
+      ...prev,
+      [key]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, phone, pickup, destination, vehicle, service, notes } = formData;
+
+    const messageText = `*Emergency Recovery Booking - Cambridge Vehicle Recovery*\n\n` +
+      `*Name:* ${name}\n` +
+      `*Phone:* ${phone}\n` +
+      `*Pickup Location:* ${pickup}\n` +
+      `*Destination:* ${destination || 'Not Specified'}\n` +
+      `*Vehicle Type:* ${vehicle}\n` +
+      `*Service Required:* ${service}\n` +
+      `*Additional Notes:* ${notes || 'None'}`;
+
+    const encodedText = encodeURIComponent(messageText);
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${settings.whatsapp}&text=${encodedText}`;
+
+    window.location.href = whatsappUrl;
+  };
 
   return (
     <section id="emergency-booking" className="eb-section">
@@ -59,32 +97,64 @@ const EmergencyBooking = () => {
               </div>
             </div>
 
-            <form className="eb-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="eb-form" onSubmit={handleSubmit}>
               <div className="eb-form-row">
                 <div className="eb-form-group">
                   <label htmlFor="eb-name">Full Name *</label>
-                  <input id="eb-name" type="text" placeholder="John Smith" required />
+                  <input
+                    id="eb-name"
+                    type="text"
+                    placeholder="John Smith"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="eb-form-group">
                   <label htmlFor="eb-phone">Phone Number *</label>
-                  <input id="eb-phone" type="tel" placeholder="+44 7700 000000" required />
+                  <input
+                    id="eb-phone"
+                    type="tel"
+                    placeholder="+44 7700 000000"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
 
               <div className="eb-form-group">
                 <label htmlFor="eb-pickup">Pickup Location *</label>
-                <input id="eb-pickup" type="text" placeholder="e.g. M25 Junction 12, near Staines" required />
+                <input
+                  id="eb-pickup"
+                  type="text"
+                  placeholder="e.g. M25 Junction 12, near Staines"
+                  value={formData.pickup}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <div className="eb-form-group">
                 <label htmlFor="eb-destination">Destination (optional)</label>
-                <input id="eb-destination" type="text" placeholder="Home / nearest garage / dealer" />
+                <input
+                  id="eb-destination"
+                  type="text"
+                  placeholder="Home / nearest garage / dealer"
+                  value={formData.destination}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="eb-form-row">
                 <div className="eb-form-group">
                   <label htmlFor="eb-vehicle">Vehicle Type *</label>
-                  <select id="eb-vehicle" required>
+                  <select
+                    id="eb-vehicle"
+                    value={formData.vehicle}
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="">Select vehicle...</option>
                     <option>Car</option>
                     <option>Van</option>
@@ -95,7 +165,12 @@ const EmergencyBooking = () => {
                 </div>
                 <div className="eb-form-group">
                   <label htmlFor="eb-service">Service Required *</label>
-                  <select id="eb-service" required>
+                  <select
+                    id="eb-service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="">Select service...</option>
                     <option>Breakdown Recovery</option>
                     <option>Auction & Garage Collection</option>
@@ -107,7 +182,13 @@ const EmergencyBooking = () => {
 
               <div className="eb-form-group">
                 <label htmlFor="eb-notes">Additional Notes</label>
-                <textarea id="eb-notes" rows={3} placeholder="Any extra details about the situation..."></textarea>
+                <textarea
+                  id="eb-notes"
+                  rows={3}
+                  placeholder="Any extra details about the situation..."
+                  value={formData.notes}
+                  onChange={handleChange}
+                ></textarea>
               </div>
 
               <button type="submit" className="eb-btn eb-btn-submit">
@@ -115,15 +196,10 @@ const EmergencyBooking = () => {
                 Submit Emergency Booking
               </button>
 
-              <a
-                href={`https://wa.me/${settings.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="eb-btn eb-btn-whatsapp"
-              >
+              <button type="submit" className="eb-btn eb-btn-whatsapp">
                 <MessageCircle size={18} />
                 Send via WhatsApp Instead
-              </a>
+              </button>
             </form>
           </div>
 

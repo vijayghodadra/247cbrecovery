@@ -87,7 +87,7 @@ const ServicesGrid = () => {
                     Emergency Call
                   </a>
                   <a
-                    href={`https://wa.me/${settings.whatsapp}`}
+                    href={`https://api.whatsapp.com/send?phone=${settings.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="card-btn card-btn-whatsapp"

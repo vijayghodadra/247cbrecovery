@@ -45,9 +45,9 @@ const Contact = () => {
       `*Message:* ${message}`;
 
     const encodedText = encodeURIComponent(messageText);
-    const whatsappUrl = `https://wa.me/${settings.whatsapp}?text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${settings.whatsapp}&text=${encodedText}`;
 
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    window.location.href = whatsappUrl;
   };
 
   return (

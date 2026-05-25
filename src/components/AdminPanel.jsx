@@ -180,7 +180,7 @@ const AdminPanel = ({ onClose }) => {
                   placeholder="447438189791"
                   required
                 />
-                <span className="group-desc">Used for wa.me links. Do not add +, spaces or starting 00. Example: 447438189791</span>
+                <span className="group-desc">Used for WhatsApp links. Do not add +, spaces or starting 00. Example: 447438189791</span>
               </div>
 
               <div className="admin-actions">
