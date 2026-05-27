@@ -70,6 +70,13 @@
   max-width: 100%;
 }
 
+.hero-subtitle-meta {
+  display: block;
+  margin-top: 12px;
+  color: #f1f5f9;
+  font-size: clamp(0.82rem, 2.5vw, 0.92rem);
+}
+
 /* Action Buttons */
 .hero-actions {
   display: flex;

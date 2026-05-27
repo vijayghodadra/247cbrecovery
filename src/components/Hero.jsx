@@ -26,9 +26,10 @@ const Hero = () => {
       </div>
 
       <p className="hero-subtitle">
-        Fast breakdown recovery in Cambridge and across the UK. Roadside
-        assistance, accident recovery, tyre service and emergency towing.
-        Average response: 15-30 minutes.
+        Cheap &amp; Reliable Vehicle Recovery, Breakdown Recovery, Accident recovery, mobile tyre service, Jump Start, auction Collection &amp; Garage Collection, Classic Car and special vehicle Transport in Cambridge &amp; Cambridgeshire.
+        <span className="hero-subtitle-meta">
+          <strong>Nationwide UK Coverage</strong> · Avg ETA from 15-30 mins
+        </span>
       </p>
 
       {/* Actions */}
