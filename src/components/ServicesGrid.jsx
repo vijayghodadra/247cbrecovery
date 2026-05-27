@@ -6,7 +6,7 @@ import './ServicesGrid.css';
 const servicesData = [
   {
     id: 1,
-    title: 'Breakdown Recovery',
+    title: 'Breakdown Vehicle Recovery',
     icon: '🚛',
     description: 'Fast, reliable 24/7 breakdown recovery across the UK with 15-30 minute response times.',
   },
@@ -24,7 +24,7 @@ const servicesData = [
   },
   {
     id: 4,
-    title: 'Classic Car & Special Vehicle',
+    title: 'Classic Car & Special Vehicle Transport',
     icon: '🚘',
     description: 'Specialist handling and transport for classic cars and special vehicles with full care and insurance.',
   },

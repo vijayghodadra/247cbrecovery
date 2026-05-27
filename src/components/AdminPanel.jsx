@@ -153,10 +153,10 @@ const AdminPanel = ({ onClose }) => {
                   type="text"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="07438 189791"
+                  placeholder="+447438189791"
                   required
                 />
-                <span className="group-desc">Example: 07438 189791 (spaces included)</span>
+                <span className="group-desc">Example: +447438189791 (spaces included)</span>
               </div>
 
               <div className="admin-group">
@@ -165,10 +165,10 @@ const AdminPanel = ({ onClose }) => {
                   type="text"
                   value={phoneRaw}
                   onChange={(e) => setPhoneRaw(e.target.value)}
-                  placeholder="07438189791"
+                  placeholder="+447438189791"
                   required
                 />
-                <span className="group-desc">Used for &lt;a href="tel:..."&gt; (No spaces or symbols)</span>
+                <span className="group-desc">Used for &lt;a href="tel:..."&gt; (e.g. +447438189791)</span>
               </div>
 
               <div className="admin-group">

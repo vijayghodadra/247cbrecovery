@@ -1,5 +1,7 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
+import { serviceAreas } from '../data/serviceAreas';
+import recoveryImg from '../../images/Recovery.png';
 import './AreasCover.css';
 
 const regions = [
@@ -21,7 +23,7 @@ const regions = [
   },
 ];
 
-const AreasCover = () => {
+const AreasCover = ({ onNavigate }) => {
   return (
     <section id="coverage" className="areas-section">
       <div className="container">
@@ -38,11 +40,35 @@ const AreasCover = () => {
           </p>
         </div>
 
-        {/* Home Base Pill */}
-        <div className="home-base-pill">
-          <MapPin size={14} />
-          <span>Cambridge — Our Home Base</span>
-          <span className="home-base-tag">15 min avg</span>
+        {/* Coverage Layout Grid with Side Image */}
+        <div className="coverage-layout-grid">
+          <div className="coverage-pills-column">
+            {serviceAreas.map((area) => {
+              const isCambridge = area.slug === 'vehicle-recovery-cambridgeshire';
+              return (
+                <button
+                  key={area.slug}
+                  onClick={() => onNavigate(`/${area.slug}`)}
+                  className="home-base-pill clickable-coverage-pill"
+                >
+                  <MapPin size={14} />
+                  <span>
+                    {isCambridge
+                      ? 'Breakdown Vehicle Recovery Cambridge & Cambridgeshire'
+                      : area.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="coverage-image-column">
+            <img
+              src={recoveryImg}
+              alt="Professional roadside vehicle recovery service area"
+              className="coverage-side-image"
+            />
+          </div>
         </div>
 
         {/* Region Groups */}

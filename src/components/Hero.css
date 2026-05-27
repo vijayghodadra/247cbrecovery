@@ -35,7 +35,32 @@
   hyphens: auto;
   max-width: 100%;
 }
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
 
+.hero-price-tag {
+  width: clamp(150px, 24vw, 240px);
+  height: auto;
+  flex-shrink: 0;
+  transform: rotate(5deg);
+  animation: floatTag 3s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes floatTag {
+  0% {
+    transform: translateY(0) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(9deg);
+  }
+}
 .text-gradient { color: var(--primary-red); }
 
 .hero-subtitle {
@@ -146,5 +171,11 @@
   }
   .badge {
     font-size: 0.75rem;
+  }
+  .hero-title-wrapper {
+    gap: 8px;
+  }
+  .hero-price-tag {
+    width: 130px;
   }
 }

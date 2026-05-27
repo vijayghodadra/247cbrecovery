@@ -3,8 +3,8 @@ import React, { createContext, useState, useEffect } from 'react';
 export const SettingsContext = createContext();
 
 const DEFAULT_SETTINGS = {
-  phone: '07438 189791',
-  phoneRaw: '07438189791',
+  phone: '+447438189791',
+  phoneRaw: '+447438189791',
   whatsapp: '447438189791',
   images: {
     heroTruck: '/hero-truck.jpeg',
@@ -22,6 +22,10 @@ export const SettingsProvider = ({ children }) => {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
+        // Force the new phone number format globally
+        parsed.phone = '+447438189791';
+        parsed.phoneRaw = '+447438189791';
+        localStorage.setItem('cvr_settings', JSON.stringify(parsed));
         // Merge with defaults in case of missing keys
         return {
           ...DEFAULT_SETTINGS,

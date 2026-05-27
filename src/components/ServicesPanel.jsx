@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { ChevronRight, Wrench, AlertTriangle, Disc, Zap, Navigation, BatteryCharging, PhoneCall } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
+import posterImage from '../../images/Poster.jpeg';
 import './ServicesPanel.css';
 
 const servicesList = [
@@ -71,6 +72,15 @@ const ServicesPanel = () => {
             <PhoneCall size={16} /> {settings.phone}
           </a>
         </div>
+      </div>
+
+      {/* Poster Image */}
+      <div className="poster-placeholder">
+        <img
+          src={posterImage}
+          alt="Cambridge Vehicle Recovery Service Area Coverage Poster"
+          className="poster-img"
+        />
       </div>
     </div>
   );

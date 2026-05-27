@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { PhoneCall, ShieldCheck, Star, Activity, MapPin } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
+import priceTag from '../../images/Tagg.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -15,11 +16,14 @@ const Hero = () => {
       </div>
 
       {/* Main Typography */}
-      <h1 className="hero-title">
-        Cambridge's #1 Vehicle <br />
-        <span className="text-gradient">Recovery Service</span> — 24/7 <br />
-        Nationwide
-      </h1>
+      <div className="hero-title-wrapper">
+        <h1 className="hero-title">
+          Cambridge's #1 Vehicle <br />
+          <span className="text-gradient">Recovery Service</span> — 24/7 <br />
+          Nationwide
+        </h1>
+        <img src={priceTag} alt="Special Price Tag" className="hero-price-tag" />
+      </div>
 
       <p className="hero-subtitle">
         Fast breakdown recovery in Cambridge and across the UK. Roadside
@@ -82,6 +86,11 @@ const Hero = () => {
         <div className="stat-item">
           <h3>99.9%</h3>
           <p>SATISFACTION</p>
+        </div>
+        <div className="stat-divider"></div>
+        <div className="stat-item">
+          <h3>From £50</h3>
+          <p>STARTING PRICE</p>
         </div>
       </div>
     </div>

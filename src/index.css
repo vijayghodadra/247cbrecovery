@@ -126,6 +126,18 @@ img { max-width: 100%; height: auto; display: block; }
   background-color: rgba(255, 255, 255, 0.05);
 }
 
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover, .btn-whatsapp:active {
+  background-color: #1ebe5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+}
+
 /* =====================
    ANIMATIONS
    ===================== */

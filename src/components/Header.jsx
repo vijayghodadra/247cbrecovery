@@ -1,27 +1,47 @@
 import React, { useState, useContext } from 'react';
-import { PhoneCall, Menu, X } from 'lucide-react';
+import { PhoneCall, Menu, X, ChevronDown } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
+import { serviceAreas } from '../data/serviceAreas';
 import './Header.css';
 
-const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#coverage', label: 'Coverage' },
-  { href: '#reviews', label: 'Reviews' },
-  { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' },
-];
-
-const Header = ({ setIsAdminView }) => {
+const Header = ({ setIsAdminView, currentPath, onNavigate }) => {
   const { settings } = useContext(SettingsContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setMobileServicesOpen(false);
+  };
+
+  const handleHashClick = (e, href) => {
+    e.preventDefault();
+    if (currentPath !== '/') {
+      // Navigate to homepage first
+      onNavigate('/');
+      // Wait for DOM to render, then scroll to section
+      setTimeout(() => {
+        const el = document.getElementById(href.replace('#', ''));
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    } else {
+      // Already on homepage, scroll directly
+      const el = document.getElementById(href.replace('#', ''));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    onNavigate('/');
+  };
 
   return (
     <header className="header">
       <div className="container header-content">
 
-        <div className="logo-area">
+        {/* Logo Area */}
+        <a href="/" onClick={handleLogoClick} className="logo-area">
           <div className="logo-icon">
             <span>🚛</span>
           </div>
@@ -29,16 +49,64 @@ const Header = ({ setIsAdminView }) => {
             <h1>Cambridge Vehicle Recovery</h1>
             <p>Premium Recovery Services</p>
           </div>
-        </div>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="main-nav" aria-label="Main navigation">
           <ul>
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+            <li>
+              <a href="/" onClick={handleLogoClick} className={currentPath === '/' ? 'active-nav-link' : ''}>Home</a>
+            </li>
+            {/* Services Dropdown Item */}
+            <li className="nav-dropdown-item">
+              <span className="dropdown-trigger">
+                Services <ChevronDown size={14} />
+              </span>
+              <ul className="dropdown-menu">
+                {serviceAreas.map((area) => (
+                  <li key={area.slug}>
+                    <a
+                      href={`/${area.slug}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onNavigate(`/${area.slug}`);
+                      }}
+                      className={currentPath === `/${area.slug}` ? 'active-dropdown-link' : ''}
+                    >
+                      {area.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            <li>
+              <a 
+                href="/cambridge" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate('/cambridge');
+                }}
+                className={currentPath === '/cambridge' ? 'active-nav-link' : ''}
+              >
+                Cambridge
+              </a>
+            </li>
+
+            {/* Other Hash Links */}
+            <li>
+              <a href="#coverage" onClick={(e) => handleHashClick(e, '#coverage')}>Coverage</a>
+            </li>
+            <li>
+              <a href="#reviews" onClick={(e) => handleHashClick(e, '#reviews')}>Reviews</a>
+            </li>
+            <li>
+              <a href="#faq" onClick={(e) => handleHashClick(e, '#faq')}>FAQ</a>
+            </li>
+            <li>
+              <a href="#contact" onClick={(e) => handleHashClick(e, '#contact')}>Contact</a>
+            </li>
+
             <li>
               <button onClick={() => setIsAdminView(true)} className="nav-admin-btn">
                 Admin
@@ -75,11 +143,64 @@ const Header = ({ setIsAdminView }) => {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} role="dialog" aria-modal="true">
         <nav>
           <ul>
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} onClick={closeMenu}>{link.label}</a>
-              </li>
-            ))}
+            <li>
+              <a href="/" onClick={(e) => { handleLogoClick(e); closeMenu(); }} className={currentPath === '/' ? 'active-nav-link' : ''}>Home</a>
+            </li>
+            {/* Mobile Services Accordion */}
+            <li className="mobile-dropdown-li">
+              <button
+                className="mobile-dropdown-toggle"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                aria-expanded={mobileServicesOpen}
+              >
+                <span>Services</span>
+                <ChevronDown size={18} className={`chevron-icon ${mobileServicesOpen ? 'rotated' : ''}`} />
+              </button>
+              <ul className={`mobile-dropdown-menu ${mobileServicesOpen ? 'open' : ''}`}>
+                {serviceAreas.map((area) => (
+                  <li key={area.slug}>
+                    <a
+                      href={`/${area.slug}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        closeMenu();
+                        onNavigate(`/${area.slug}`);
+                      }}
+                    >
+                      {area.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            <li>
+              <a 
+                href="/cambridge" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  closeMenu();
+                  onNavigate('/cambridge');
+                }}
+                className={currentPath === '/cambridge' ? 'active-nav-link' : ''}
+              >
+                Cambridge
+              </a>
+            </li>
+
+            {/* Other Mobile Links */}
+            <li>
+              <a href="#coverage" onClick={(e) => { handleHashClick(e, '#coverage'); closeMenu(); }}>Coverage</a>
+            </li>
+            <li>
+              <a href="#reviews" onClick={(e) => { handleHashClick(e, '#reviews'); closeMenu(); }}>Reviews</a>
+            </li>
+            <li>
+              <a href="#faq" onClick={(e) => { handleHashClick(e, '#faq'); closeMenu(); }}>FAQ</a>
+            </li>
+            <li>
+              <a href="#contact" onClick={(e) => { handleHashClick(e, '#contact'); closeMenu(); }}>Contact</a>
+            </li>
             <li>
               <button
                 onClick={() => {
@@ -106,4 +227,3 @@ const Header = ({ setIsAdminView }) => {
 };
 
 export default Header;
-
