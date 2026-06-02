@@ -18,9 +18,9 @@ const Hero = () => {
       {/* Main Typography */}
       <div className="hero-title-wrapper">
         <h1 className="hero-title">
-          Cambridge's #1 Vehicle <br />
-          <span className="text-gradient">Recovery Service</span> — 24/7 <br />
-          Nationwide
+          24/7 Vehicle Recovery <br />
+          <span className="text-gradient">Cambridge</span> | Breakdown Recovery <br />
+          Cambridgeshire
         </h1>
         <img src={priceTag} alt="Special Price Tag" className="hero-price-tag" />
       </div>
