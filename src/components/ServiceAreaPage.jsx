@@ -38,9 +38,13 @@ const ServiceAreaPage = ({ area, onNavigateHome, onNavigate }) => {
             <span className="area-badge">24/7 EMERGENCY RECOVERY</span>
             <h1 className="area-title">{area.name}</h1>
             <p className="area-subtitle">
-              Cheap & reliable vehicle recovery & breakdown assistance in Cambridge & Cambridgeshire. <br />
-              Nationwide UK coverage <br />
-              Avg ETA from 15-30 mins
+              {area.subtitle || (
+                <>
+                  Cheap &amp; reliable vehicle recovery &amp; breakdown assistance in Cambridge &amp; Cambridgeshire. <br />
+                  Nationwide UK coverage <br />
+                  Avg ETA from 15-30 mins
+                </>
+              )}
             </p>
             <div className="area-hero-actions">
               <a href={`tel:${settings.phoneRaw}`} className="btn btn-primary emergency-call-btn">

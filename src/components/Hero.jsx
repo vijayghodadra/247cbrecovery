@@ -19,14 +19,15 @@ const Hero = () => {
       <div className="hero-title-wrapper">
         <h1 className="hero-title">
           24/7 Vehicle Recovery <br />
-          <span className="text-gradient">Cambridge</span> | Breakdown Recovery <br />
-          Cambridgeshire
+          <span className="text-gradient">Car Recovery</span> Breakdown Recovery <br />
+          Van Recovery <br />
+          <span className="text-gradient">Nationwide UK Coverage</span>
         </h1>
-        <img src={priceTag} alt="Special Price Tag" className="hero-price-tag" />
+        <img src={priceTag} alt="24/7 Vehicle recovery and breakdown assistance starting price" fetchPriority="high" className="hero-price-tag" />
       </div>
 
       <p className="hero-subtitle">
-        Cheap &amp; Reliable Vehicle Recovery, Breakdown Recovery, Accident recovery, mobile tyre service, Jump Start, auction Collection &amp; Garage Collection, Classic Car and special vehicle Transport in Cambridge &amp; Cambridgeshire.
+        Cheap &amp; Reliable Vehicle Recovery, Breakdown Recovery, Accident recovery, mobile tyre service, Jump Start, auction Collection &amp; Garage Collection, Classic Car and special vehicle Transport.
         <span className="hero-subtitle-meta">
           <strong>Nationwide UK Coverage</strong> · Avg ETA from 15-30 mins
         </span>

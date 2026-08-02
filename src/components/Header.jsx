@@ -82,6 +82,19 @@ const Header = ({ setIsAdminView, currentPath, onNavigate }) => {
 
             <li>
               <a 
+                href="/areas-we-cover" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate('/areas-we-cover');
+                }}
+                className={currentPath === '/areas-we-cover' ? 'active-nav-link' : ''}
+              >
+                Areas We Cover
+              </a>
+            </li>
+
+            <li>
+              <a 
                 href="/cambridge" 
                 onClick={(e) => {
                   e.preventDefault();
@@ -105,12 +118,6 @@ const Header = ({ setIsAdminView, currentPath, onNavigate }) => {
             </li>
             <li>
               <a href="#contact" onClick={(e) => handleHashClick(e, '#contact')}>Contact</a>
-            </li>
-
-            <li>
-              <button onClick={() => setIsAdminView(true)} className="nav-admin-btn">
-                Admin
-              </button>
             </li>
           </ul>
         </nav>
@@ -176,6 +183,20 @@ const Header = ({ setIsAdminView, currentPath, onNavigate }) => {
 
             <li>
               <a 
+                href="/areas-we-cover" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  closeMenu();
+                  onNavigate('/areas-we-cover');
+                }}
+                className={currentPath === '/areas-we-cover' ? 'active-nav-link' : ''}
+              >
+                Areas We Cover
+              </a>
+            </li>
+
+            <li>
+              <a 
                 href="/cambridge" 
                 onClick={(e) => {
                   e.preventDefault();
@@ -200,17 +221,6 @@ const Header = ({ setIsAdminView, currentPath, onNavigate }) => {
             </li>
             <li>
               <a href="#contact" onClick={(e) => { handleHashClick(e, '#contact'); closeMenu(); }}>Contact</a>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  closeMenu();
-                  setIsAdminView(true);
-                }}
-                className="mobile-admin-btn"
-              >
-                Admin
-              </button>
             </li>
           </ul>
         </nav>

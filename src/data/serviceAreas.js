@@ -196,22 +196,24 @@ export const serviceAreas = [
     slug: 'vehicle-recovery-huntingdon',
     name: 'Vehicle Recovery Huntingdon',
     shortName: 'Huntingdon',
-    seoTitle: '24/7 Huntingdon Vehicle Recovery | Emergency Breakdown Towing',
-    seoMetaDescription: 'Emergency 24/7 vehicle recovery in Huntingdon. Local breakdown assistance, flat battery jumpstarts, towing, and roadside help. Fast response times.',
-    uniqueText: 'Located along the Ouse Valley, Huntingdon is surrounded by busy roads like the A14, A141, and A1. If your vehicle breaks down in Huntingdon, Godmanchester, or nearby towns, we are on hand to provide prompt, reliable assistance. Our local recovery trucks can tow cars, caravans, and vans of all sizes. We work day and night, ensuring that your vehicle is safely recovered to your home, a garage, or another destination of your choice.',
-    landmarks: ['Hinchingbrooke Country Park', 'Cromwell Museum', 'River Great Ouse (Huntingdon)', 'Huntingdon Town Hall', 'Portholme Meadow'],
+    seoTitle: 'Car & Van Recovery Huntingdon | 24/7 Vehicle Recovery Service',
+    seoMetaDescription: 'Fast 24/7 car recovery Huntingdon & van recovery Huntingdon. Premier Huntingdon recovery service, jump start near me & emergency vehicle recovery.',
+    contentTitle: '24/7 Huntingdon Recovery Service — Car Recovery & Van Recovery',
+    subtitle: 'Fast 24/7 car recovery Huntingdon, van recovery Huntingdon & jump start near me. Premier Huntingdon recovery service with 15-30 min arrival.',
+    uniqueText: 'Looking for a dependable Huntingdon recovery service or urgent Huntingdon recovery near me? We provide round-the-clock 24/7 emergency vehicle recovery, car recovery Huntingdon, van recovery Huntingdon, and jump start near me assistance across Huntingdon, Godmanchester, St Neots, Brampton, and Hinchingbrooke. Located along busy transit corridors like the A14, A141, and A1, our local recovery operators deliver rapid 15–30 minute response times. Whether you need roadside car recovery, commercial van recovery, flat battery assistance, or long-distance vehicle transport, our team is available 24 hours a day with fully insured recovery trucks.',
+    landmarks: ['Hinchingbrooke Country Park', 'Cromwell Museum', 'River Great Ouse (Huntingdon)', 'Huntingdon Town Hall', 'Portholme Meadow', 'Godmanchester Chinese Bridge', 'A14 Junction 23'],
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.2748464303436!2d-0.18371308420228308!3d52.33083597977933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877ffe49be3e3df%3A0x7d815779a1f28b49!2sHuntingdon%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000',
     reviews: [
       {
-        author: 'Andrew J.',
+        author: 'Andrew J. from Huntingdon',
         rating: 5,
-        text: 'Car broke down at Hinchingbrooke Park. Spoke to a friendly operator and the recovery truck was there in 30 mins. Got me sorted out quickly. Thanks!',
+        text: 'Top rated Huntingdon recovery service! My vehicle broke down at Hinchingbrooke Park and I needed a jump start near me. The recovery driver arrived in 20 mins for fast car recovery.',
         date: '4 days ago'
       },
       {
-        author: 'Samantha V.',
+        author: 'Samantha V. from Godmanchester',
         rating: 5,
-        text: 'Top class service in Huntingdon. Very professional driver who arrived on time, was very careful with my classic car, and charged a fair price.',
+        text: 'Excellent van recovery Huntingdon. Prompt dispatch, professional driver, and very clear pricing for emergency vehicle recovery.',
         date: '1 month ago'
       }
     ]

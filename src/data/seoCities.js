@@ -272,8 +272,195 @@ export const seoCities = {
   }
 };
 
+// Dedicated Huntingdon SEO Landing Pages
+const dedicatedHuntingdonPages = {
+  'car-recovery-huntingdon': {
+    slug: 'car-recovery-huntingdon',
+    name: 'Car Recovery Huntingdon',
+    shortName: 'Huntingdon',
+    seoTitle: 'Car Recovery Huntingdon | 24/7 Fast Towing Service',
+    seoMetaDescription: 'Fast 24/7 car recovery in Huntingdon, PE29 & Cambridgeshire. Professional flatbed towing, breakdown assistance & vehicle rescue. 15-30 min arrival!',
+    title: '24/7 Car Recovery Huntingdon',
+    contentTitle: '24/7 Car Recovery & Towing Services in Huntingdon & Nearby Areas',
+    tagline: 'Rapid dispatch car recovery, breakdown towing, and emergency vehicle rescue across Huntingdon, PE29, A14 & A1 corridors.',
+    uniqueText: 'Need fast, reliable car recovery in Huntingdon? Our licensed local recovery operators provide 24/7 emergency car towing, flatbed vehicle transport, and breakdown recovery across Huntingdon, Godmanchester, St Neots, Brampton, and Hinchingbrooke. Whether your vehicle has experienced mechanical breakdown on the A14, a non-starter at home, or collision damage, our fleet arrives within 15 to 30 minutes. Fully insured with comprehensive motor trade transit cover. Contact our 24-hour dispatch team for immediate assistance or a transparent, fixed quote.',
+    landmarks: [
+      'Oliver Cromwell Museum',
+      'Hinchingbrooke Country Park',
+      'Huntingdon Racecourse',
+      'Godmanchester Chinese Bridge',
+      'A14 Junction 23 / A1 Corridor'
+    ],
+    mapUrl: 'https://maps.google.com/maps?q=Huntingdon%2C%20Cambridgeshire%2C%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed',
+    reviews: [
+      {
+        id: 1,
+        author: 'Mark T.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '1 day ago',
+        text: 'Broke down near Huntingdon Racecourse with a broken alternator. The car recovery team arrived in 20 minutes and safely towed my vehicle back home.'
+      },
+      {
+        id: 2,
+        author: 'Rachel K.',
+        location: 'Godmanchester',
+        rating: 5,
+        date: '5 days ago',
+        text: 'Outstanding car recovery service in Huntingdon. Clear price quote upfront, polite driver, and very professional flatbed truck.'
+      },
+      {
+        id: 3,
+        author: 'David P.',
+        location: 'St Neots',
+        rating: 5,
+        date: '1 week ago',
+        text: 'Stranded on the A14 near Huntingdon during rush hour. Fast dispatch and excellent customer service.'
+      }
+    ]
+  },
+  'van-recovery-huntingdon': {
+    slug: 'van-recovery-huntingdon',
+    name: 'Van Recovery Huntingdon',
+    shortName: 'Huntingdon',
+    seoTitle: 'Van Recovery Huntingdon | 24/7 Commercial Van Towing',
+    seoMetaDescription: 'Specialist 24/7 van recovery in Huntingdon & PE29. Emergency towing for delivery vans, fleet vehicles & light commercials across Cambridgeshire.',
+    title: '24/7 Van Recovery Huntingdon',
+    contentTitle: 'Commercial Van Recovery & Fleet Towing Services in Huntingdon',
+    tagline: 'Heavy-duty van recovery, fleet assistance, and light commercial vehicle towing in Huntingdon and surrounding transit routes.',
+    uniqueText: 'When a commercial delivery van or fleet vehicle breaks down in Huntingdon, every minute counts. Our dedicated 24/7 van recovery Huntingdon team provides rapid-response towing for long-wheelbase vans, Luton trucks, Sprinters, and commercial vehicles. We operate heavy-duty flatbed recovery vehicles equipped with high-capacity winches to handle loaded commercial vehicles safely. Available 24 hours a day across Huntingdon, Hinchingbrooke Business Park, A14 bypass, and surrounding Cambridgeshire industrial quarters.',
+    landmarks: [
+      'Hinchingbrooke Business Park',
+      'Huntingdon Industrial Estate',
+      'St Neots Industrial Quarter',
+      'A14 Expressway Bypass',
+      'Peterborough Link Corridor'
+    ],
+    mapUrl: 'https://maps.google.com/maps?q=Huntingdon%2C%20Cambridgeshire%2C%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed',
+    reviews: [
+      {
+        id: 1,
+        author: 'Steve B.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '3 days ago',
+        text: 'Our company delivery van broke down near Hinchingbrooke Park. Van recovery arrived within 25 minutes and got our stock transferred and van towed.'
+      },
+      {
+        id: 2,
+        author: 'Gary W.',
+        location: 'Brampton',
+        rating: 5,
+        date: '1 week ago',
+        text: 'Best van recovery service in Huntingdon. Professional heavy flatbed winch equipment and great communication.'
+      },
+      {
+        id: 3,
+        author: 'Chris L.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '2 weeks ago',
+        text: 'Prompt, reliable, and fair pricing for commercial van recovery. Highly recommended for business fleet managers.'
+      }
+    ]
+  },
+  'jump-start-huntingdon': {
+    slug: 'jump-start-huntingdon',
+    name: 'Jump Start Huntingdon',
+    shortName: 'Huntingdon',
+    seoTitle: 'Jump Start Huntingdon | 24/7 Mobile Battery Assistance',
+    seoMetaDescription: 'Car or van flat battery in Huntingdon? Fast 24/7 jump start service near you. Mobile battery boosting & testing across PE29 & Cambridgeshire.',
+    title: '24/7 Jump Start Service in Huntingdon',
+    contentTitle: 'Rapid Mobile Jump Start & Flat Battery Assistance in Huntingdon',
+    tagline: 'Emergency battery booster packs and mobile battery diagnostics dispatched in 15–30 minutes across Huntingdon.',
+    uniqueText: 'Is your vehicle refusing to start due to a dead or flat battery in Huntingdon? Don\'t panic. Our mobile roadside operators carry heavy-duty 12V and 24V jump start booster packs, battery health analyzers, and alternator testing equipment. We dispatch directly to your home driveway, workplace car park, or roadside anywhere in Huntingdon, Godmanchester, St Neots, and PE29. We get your engine restarted safely without risking damage to your vehicle\'s ECU or electrical system.',
+    landmarks: [
+      'Huntingdon Railway Station',
+      'Towerfields Retail Park',
+      'Hinchingbrooke Hospital Car Park',
+      'Godmanchester High Street',
+      'Brampton Park Road'
+    ],
+    mapUrl: 'https://maps.google.com/maps?q=Huntingdon%2C%20Cambridgeshire%2C%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed',
+    reviews: [
+      {
+        id: 1,
+        author: 'Emma R.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '2 days ago',
+        text: 'Car had a completely flat battery at Huntingdon station. Called them and a technician arrived in 15 minutes to jump start my car. Fantastic service!'
+      },
+      {
+        id: 2,
+        author: 'James H.',
+        location: 'Godmanchester',
+        rating: 5,
+        date: '4 days ago',
+        text: 'Quick jump start near me in Huntingdon. Very friendly operator who tested my battery and alternator before sending me on my way.'
+      },
+      {
+        id: 3,
+        author: 'Claire D.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '1 week ago',
+        text: 'Saved me when my van battery died at work. Quick arrival, heavy-duty jump pack, started right away.'
+      }
+    ]
+  },
+  'breakdown-recovery-huntingdon': {
+    slug: 'breakdown-recovery-huntingdon',
+    name: 'Breakdown Recovery Huntingdon',
+    shortName: 'Huntingdon',
+    seoTitle: 'Breakdown Recovery Huntingdon | 24/7 Emergency Towing',
+    seoMetaDescription: '24/7 breakdown recovery in Huntingdon, PE29 & Cambridgeshire. Emergency roadside assistance, towing, puncture repairs & winch rescue.',
+    title: '24/7 Breakdown Recovery Huntingdon',
+    contentTitle: '24/7 Emergency Breakdown Recovery & Roadside Assistance in Huntingdon',
+    tagline: 'Comprehensive breakdown recovery, vehicle towing, and roadside assistance available 24 hours a day in Huntingdon.',
+    uniqueText: 'If you have suffered a roadside breakdown, mechanical breakdown, flat tyre, or engine malfunction in Huntingdon, our 24/7 breakdown recovery team is here to assist. We provide complete roadside towing, flatbed transport, winch rescue, and long-distance vehicle recovery for all car and van models. Operating across Huntingdon, PE29, Godmanchester, St Neots, Brampton, A14, and A1 junctions with an average 15-30 minute dispatch time.',
+    landmarks: [
+      'Oliver Cromwell Museum',
+      'Hinchingbrooke Country Park',
+      'Huntingdon Racecourse',
+      'A14 / A1 Junction Interchange',
+      'St Neots Bypass'
+    ],
+    mapUrl: 'https://maps.google.com/maps?q=Huntingdon%2C%20Cambridgeshire%2C%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed',
+    reviews: [
+      {
+        id: 1,
+        author: 'Paul S.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '1 day ago',
+        text: 'Broke down on the A14 near Huntingdon. Rapid response breakdown recovery team came within 20 minutes and towed us to safety.'
+      },
+      {
+        id: 2,
+        author: 'Helen M.',
+        location: 'St Neots',
+        rating: 5,
+        date: '6 days ago',
+        text: 'Top class breakdown recovery service in Huntingdon. Professional driver, clean vehicle, fair pricing.'
+      },
+      {
+        id: 3,
+        author: 'Richard N.',
+        location: 'Huntingdon',
+        rating: 5,
+        date: '2 weeks ago',
+        text: 'Very efficient roadside breakdown towing. Towed my car straight to my local garage with no hassle.'
+      }
+    ]
+  }
+};
+
 // Formulate dynamic SEO content to avoid thin duplicate penalties
 export const generateDynamicSeoPage = (slug) => {
+  if (dedicatedHuntingdonPages[slug]) {
+    return dedicatedHuntingdonPages[slug];
+  }
   const match = slug.match(/^(vehicle-recovery|breakdown-recovery|roadside-assistance)-([a-z0-9-]+)$/);
   if (!match) return null;
 

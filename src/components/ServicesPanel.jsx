@@ -27,8 +27,9 @@ const ServicesPanel = () => {
       <div className="media-placeholder">
         <img
           src={settings.images.heroTruck}
-          alt="Cambridge Vehicle Recovery — Recovery Truck In Action"
+          alt="24/7 Vehicle recovery flatbed truck operating on location"
           className="hero-truck-img"
+          loading="lazy"
         />
       </div>
 
@@ -78,8 +79,9 @@ const ServicesPanel = () => {
       <div className="poster-placeholder">
         <img
           src={posterImage}
-          alt="Cambridge Vehicle Recovery Service Area Coverage Poster"
+          alt="24/7 Emergency breakdown recovery service coverage area poster"
           className="poster-img"
+          loading="lazy"
         />
       </div>
     </div>

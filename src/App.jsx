@@ -19,6 +19,7 @@ import AdminPanel from './components/AdminPanel';
 import ServiceAreaPage from './components/ServiceAreaPage';
 import CambridgeCoverage from './components/CambridgeCoverage';
 import CambridgePage from './components/CambridgePage';
+import AreasWeCoverPage from './components/AreasWeCoverPage';
 import { serviceAreas } from './data/serviceAreas';
 import { generateDynamicSeoPage } from './data/seoCities';
 import { SettingsContext } from './context/SettingsContext';
@@ -60,15 +61,20 @@ function App() {
       if (metaDescription) {
         metaDescription.setAttribute('content', activeArea.seoMetaDescription);
       }
+    } else if (currentPath === '/areas-we-cover') {
+      document.title = 'Areas We Cover Across Cambridgeshire | 247 CB Vehicle Recovery';
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 'Fast, reliable 24/7 vehicle recovery, car recovery, van recovery, breakdown towing, and jump start services throughout Cambridgeshire and surrounding counties.');
+      }
     } else if (currentPath === '/cambridge') {
       document.title = '🚨 24/7 Premium Vehicle Recovery Services Cambridge';
       if (metaDescription) {
         metaDescription.setAttribute('content', "Professional vehicle recovery anywhere across Cambridge city and county. Science Park, Addenbrooke's, all university colleges, business parks and residential areas covered 24/7. Specialist care for prestige vehicles.");
       }
     } else {
-      document.title = 'Cambridge Vehicle Recovery | 24/7 Emergency Service';
+      document.title = '24/7 Vehicle Recovery & Breakdown Service | Towing UK';
       if (metaDescription) {
-        metaDescription.setAttribute('content', "Cambridge's #1 Vehicle Recovery Service — 24/7 Nationwide. Fast breakdown recovery, accident recovery, tyre service, and emergency towing in Cambridge and across the UK.");
+        metaDescription.setAttribute('content', "Fast 24/7 vehicle recovery, breakdown towing, car recovery & roadside assistance in Cambridge, Huntingdon & UK nationwide. 15-30 min response time.");
       }
     }
   }, [activeArea, currentPath]);
@@ -93,6 +99,8 @@ function App() {
           onNavigateHome={() => handleNavigate('/')} 
           onNavigate={handleNavigate} 
         />
+      ) : currentPath === '/areas-we-cover' ? (
+        <AreasWeCoverPage onNavigateHome={() => handleNavigate('/')} onNavigate={handleNavigate} />
       ) : currentPath === '/cambridge' ? (
         <CambridgePage onNavigateHome={() => handleNavigate('/')} onNavigate={handleNavigate} />
       ) : (
@@ -144,7 +152,7 @@ function App() {
       )}
 
       {/* Footer */}
-      <Footer />
+      <Footer onNavigate={handleNavigate} setIsAdminView={setIsAdminView} />
 
       {/* Floating WhatsApp */}
       <a
