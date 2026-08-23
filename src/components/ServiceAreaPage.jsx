@@ -70,7 +70,7 @@ const ServiceAreaPage = ({ area, onNavigateHome, onNavigate }) => {
         <div className="area-main-content">
           <div className="content-card">
             <h2>{area.contentTitle || `Cheap & reliable vehicle breakdown recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 , A14,`}</h2>
-            <p className="area-description-text">{area.uniqueText}</p>
+            <div className="area-description-text" style={{ whiteSpace: 'pre-line' }}>{area.uniqueText}</div>
             
             <div className="trust-factors-grid">
               <div className="trust-factor">

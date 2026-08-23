@@ -62,7 +62,7 @@ function App() {
         metaDescription.setAttribute('content', activeArea.seoMetaDescription);
       }
     } else if (currentPath === '/areas-we-cover') {
-      document.title = 'Areas We Cover Across Cambridgeshire | 247 CB Vehicle Recovery';
+      document.title = 'Areas We Cover Across Cambridge & Cambridgeshire & Huntingdon';
       if (metaDescription) {
         metaDescription.setAttribute('content', 'Fast, reliable 24/7 vehicle recovery, car recovery, van recovery, breakdown towing, and jump start services throughout Cambridgeshire and surrounding counties.');
       }
