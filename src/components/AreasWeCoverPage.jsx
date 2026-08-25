@@ -59,7 +59,7 @@ const AreasWeCoverPage = ({ onNavigateHome, onNavigate }) => {
 
           <div className="coverage-body-text">
             <p>
-              247 CB Vehicle Recovery provides professional 24/7 vehicle recovery, breakdown recovery and roadside assistance across Cambridgeshire and the surrounding counties. Our experienced recovery operators offer reliable car recovery, van recovery, emergency roadside assistance, jump starts, flat battery assistance, accident recovery and long-distance vehicle transport for motorists and businesses throughout the region.
+              247 CB Vehicle Recovery provides professional 24/7 vehicle recovery, breakdown recovery and roadside assistance across Cambridgeshire and the surrounding counties. Our experienced recovery operators offer reliable car recovery, van recovery, emergency roadside assistance, jump starts, flat battery assistance, accident recovery and long-distance vehicle transport for motorists and businesses throughout the region. Our jump start service can help get vehicles with flat or weak batteries back on the road where safe to do so.
             </p>
 
             <p>
@@ -67,25 +67,25 @@ const AreasWeCoverPage = ({ onNavigateHome, onNavigate }) => {
             </p>
 
             <p>
-              Our local Cambridgeshire breakdown recovery coverage also extends to Alconbury, Alconbury Weston, Brampton, Buckden, Grafham, Kimbolton, Ellington, Spaldwick, Catworth, Great Stukeley, Little Stukeley, Hemingford Grey, Hemingford Abbots, Fenstanton, Hilton, Holywell, Bluntisham, Earith, Somersham, Warboys, Bury, Upwood, Abbots Ripton, Woodhurst, Old Hurst, Pidley, Wyton, Houghton, Hartford, Offord Cluny, Offord D\'Arcy, Papworth Everard, Cambourne, Bar Hill, Longstanton, Histon, Impington, Milton, Waterbeach, Cottenham, Willingham, Swavesey, Hardwick, Comberton, Sawston, Fulbourn, Bottisham, Burwell, Fordham, Littleport, Witchford, Manea, Doddington, Benwick and Wimblington.
+              Our local Cambridgeshire breakdown recovery coverage also extends to Alconbury, Alconbury Weston, Brampton, Buckden, Grafham, Kimbolton, Ellington, Spaldwick, Catworth, Great Stukeley, Little Stukeley, Hemingford Grey, Hemingford Abbots, Fenstanton, Hilton, Holywell, Bluntisham, Earith, Somersham, Warboys, Bury, Upwood, Abbots Ripton, Woodhurst, Old Hurst, Pidley, Wyton, Houghton, Hartford, Offord Cluny, Offord D'Arcy, Papworth Everard, Cambourne, Bar Hill, Longstanton, Histon, Impington, Milton, Waterbeach, Cottenham, Willingham, Swavesey, Hardwick, Comberton, Sawston, Fulbourn, Bottisham, Burwell, Fordham, Littleport, Witchford, Manea, Doddington, Benwick and Wimblington.
             </p>
 
             <h3 style={{ marginTop: '20px', marginBottom: '10px', fontSize: '1.2rem', color: 'var(--text-main)' }}>Motorway & A-Road Breakdown Recovery</h3>
 
             <p>
-              If you require motorway breakdown recovery, roadside assistance or emergency vehicle recovery, our team covers major routes throughout Cambridgeshire, including the M11, A14, A1, A1(M), A10, A11, A47, A428, A421, A141, A1123, A1307, A142, A605, A603, A1198 and A505.
+              If you require motorway breakdown recovery, roadside assistance, jump starts or emergency vehicle recovery, our team covers major routes throughout Cambridgeshire, including the M11, A14, A1, A1(M), A10, A11, A47, A428, A421, A141, A1123, A1307, A142, A605, A603, A1198 and A505.
             </p>
 
             <p>
-              We also provide M11 breakdown recovery around Junctions 9, 10, 11, 12, 13 and 14. Our recovery operators can assist with cars, vans and light commercial vehicles, subject to safe roadside access and motorway safety requirements.
+              We also provide M11 breakdown recovery around Junctions 9, 10, 11, 12, 13 and 14. Our recovery operators can assist with cars, vans and light commercial vehicles, subject to safe roadside access and motorway safety requirements. Where a vehicle will not start due to a flat battery, our jump start assistance may also be available to help you continue your journey safely.
             </p>
 
             <p>
-              For motorists searching for car recovery near me, vehicle recovery near me, breakdown recovery near me or a recovery truck near me, our professional team is available 24/7 to help secure and recover your vehicle safely.
+              For motorists searching for car recovery near me, vehicle recovery near me, breakdown recovery near me, jump start near me or a recovery truck near me, our professional team is available 24 hours a day, 7 days a week.
             </p>
 
             <p>
-              247 CB Vehicle Recovery also provides professional vehicle recovery across Bedfordshire, Northamptonshire, Lincolnshire, Norfolk, Suffolk, Essex and Hertfordshire. Contact us 24/7 for reliable emergency roadside assistance and vehicle recovery.
+              247 CB Vehicle Recovery also provides professional vehicle recovery across Bedfordshire, Northamptonshire, Lincolnshire, Norfolk, Suffolk, Essex and Hertfordshire. Contact us 24/7 for reliable emergency roadside assistance, jump starts and vehicle recovery.
             </p>
           </div>
         </section>
@@ -99,15 +99,15 @@ const AreasWeCoverPage = ({ onNavigateHome, onNavigate }) => {
 
           <div className="coverage-body-text">
             <p>
-              247 CB Vehicle Recovery provides professional 24/7 Cambridge vehicle recovery, car recovery, van recovery, breakdown recovery and roadside assistance throughout Cambridge and the surrounding villages. Our experienced recovery operators are available day and night to assist with vehicle breakdowns, flat batteries, punctures, mechanical faults, accident recovery and vehicle transportation.
+              247 CB Vehicle Recovery provides professional 24/7 Cambridge vehicle recovery, car recovery, van recovery, breakdown recovery and roadside assistance throughout Cambridge and the surrounding villages. Our experienced recovery operators are available day and night to assist with vehicle breakdowns, jump starts, flat batteries, punctures, mechanical faults, accident recovery and vehicle transportation.
             </p>
 
             <p>
-              We regularly provide Cambridge breakdown recovery throughout Cambridge City Centre, Chesterton, Arbury, King\'s Hedges, Orchard Park, Newnham, Trumpington, Romsey, Petersfield, Abbey, Cherry Hinton, Coleridge and Queen Edith\'s.
+              We regularly provide Cambridge breakdown recovery throughout Cambridge City Centre, Chesterton, Arbury, King's Hedges, Orchard Park, Newnham, Trumpington, Romsey, Petersfield, Abbey, Cherry Hinton, Coleridge and Queen Edith's.
             </p>
 
             <p>
-              Our car recovery and roadside assistance service also covers Histon, Impington, Milton, Waterbeach, Landbeach, Horningsea, Fen Ditton, Stow Cum Quy, Bottisham, Lode, Swaffham Bulbeck, Swaffham Prior, Burwell and Reach.
+              Our car recovery and roadside assistance service also covers Histon, Impington, Milton, Waterbeach, Landbeach, Horningsea, Fen Ditton, Stow Cum Quy, Bottisham, Lode, Swaffham Bulbeck, Swaffham Prior, Burwell and Reach, with jump start assistance available for suitable flat-battery situations.
             </p>
 
             <p>
@@ -123,11 +123,11 @@ const AreasWeCoverPage = ({ onNavigateHome, onNavigate }) => {
             </p>
 
             <p>
-              Whether you need emergency roadside recovery, car recovery near me, van recovery, vehicle towing, breakdown assistance or long-distance vehicle transport, 247 CB Vehicle Recovery is available 24/7 across Cambridge, Cambridgeshire and surrounding areas.
+              Whether you need emergency roadside recovery, car recovery near me, jump start near me, van recovery, vehicle towing, breakdown assistance or long-distance vehicle transport, 247 CB Vehicle Recovery is available 24/7 across Cambridge, Cambridgeshire and surrounding areas.
             </p>
 
             <p>
-              For professional, reliable and affordable vehicle recovery in Cambridge and across Cambridgeshire, contact 247 CB Vehicle Recovery for immediate assistance.
+              For professional, reliable and affordable vehicle recovery in Cambridge and across Cambridgeshire, including jump start assistance, contact 247 CB Vehicle Recovery for immediate assistance.
             </p>
           </div>
         </section>
