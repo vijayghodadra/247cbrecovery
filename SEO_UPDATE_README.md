@@ -16,6 +16,7 @@ This document lists the SEO updates made to target pages on August 23 and August
 * **August 25 Update:** 
   - Updated the Cambridgeshire page unique intro text to integrate "jump start" search keywords ("need a jump start", "jump start assistance", and "jump start near me").
   - Updated the M11 Motorway page unique intro text to integrate "jump start" search keywords ("jump start assistance", "jump starts", and "jump start near me").
+  - Updated the Stansted Airport page unique intro text to integrate "jump start" search keywords ("jump start assistance", "jump starts", and "jump start near me").
 
 ---
 
@@ -25,7 +26,7 @@ This document lists the SEO updates made to target pages on August 23 and August
 | :--- | :--- | :--- |
 | **Cambridgeshire**<br>`/vehicle-recovery-cambridgeshire` | Cheap & Reliable Vehicle Recovery Cambridge \| 24/7 Breakdown Recovery in Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, M11, A10 & A14 | If you need vehicle recovery in Cambridge or Cambridgeshire... *(3 Paragraphs, updated with jump start keywords)* |
 | **M11 Motorway**<br>`/vehicle-recovery-m11` | Cheap & Reliable Vehicle Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Breaking down on the fast-moving M11 motorway... *(4 Paragraphs, updated with jump start keywords)* |
-| **Stansted Airport**<br>`/vehicle-recovery-stansted` | Cheap & Reliable Stansted Airport Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Getting stranded on your way to or from London Stansted Airport... *(4 Paragraphs)* |
+| **Stansted Airport**<br>`/vehicle-recovery-stansted` | Cheap & Reliable Stansted Airport Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Getting stranded on your way to or from London Stansted Airport... *(4 Paragraphs, updated with jump start keywords)* |
 | **A11 Road**<br>`/vehicle-recovery-a11` | Cheap & Reliable A11 Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Connecting Cambridgeshire with Suffolk and Norfolk, the A11... *(4 Paragraphs)* |
 | **A14 Road**<br>`/vehicle-recovery-a14` | Cheap & Reliable A14 Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10 & M11 | The A14 is a major high-speed route connecting the Midlands... *(4 Paragraphs)* |
 | **A10 Road**<br>`/vehicle-recovery-a10` | Cheap & Reliable A10 Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, M11 & A14 | The A10 is a major trunk route connecting London with King's Lynn... *(4 Paragraphs)* |
