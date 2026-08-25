@@ -29,12 +29,17 @@ This document lists the SEO updates made to target pages on August 23 and August
 * **File Modified:** [`AreasWeCoverPage.jsx`](file:///c:/Users/vijay/Desktop/Client/src/components/AreasWeCoverPage.jsx)
 * **August 25 Update:** Updated the page unique intro paragraphs to integrate "jump start" search keywords.
 
+### 4. Cambridge Page Title & Content Update
+* **Files Modified:** [`App.jsx`](file:///c:/Users/vijay/Desktop/Client/src/App.jsx) & [`CambridgeDetailedContent.jsx`](file:///c:/Users/vijay/Desktop/Client/src/components/CambridgeDetailedContent.jsx)
+* **August 25 Update:** Updated the page title tag to "Cambridge Vehicle Recovery | 24/7 Breakdown Recovery & Roadside Assistance" and added the new 4-paragraph SEO-optimized introduction paragraphs to incorporate keywords.
+
 ---
 
 ## 📋 Updated Pages Directory
 
 | Page Route | New Title Tag | New SEO Intro Text (Multi-paragraph) |
 | :--- | :--- | :--- |
+| **Cambridge**<br>`/cambridge` | Cambridge Vehicle Recovery \| 24/7 Breakdown Recovery & Roadside Assistance | Our professional Cambridge vehicle recovery service provides... *(4 Paragraphs, updated with jump start keywords)* |
 | **Cambridgeshire**<br>`/vehicle-recovery-cambridgeshire` | Cheap & Reliable Vehicle Recovery Cambridge \| 24/7 Breakdown Recovery in Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, M11, A10 & A14 | If you need vehicle recovery in Cambridge or Cambridgeshire... *(3 Paragraphs, updated with jump start keywords)* |
 | **M11 Motorway**<br>`/vehicle-recovery-m11` | Cheap & Reliable Vehicle Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Breaking down on the fast-moving M11 motorway... *(4 Paragraphs, updated with jump start keywords)* |
 | **Stansted Airport**<br>`/vehicle-recovery-stansted` | Cheap & Reliable Stansted Airport Vehicle Recovery \| 24/7 Breakdown Recovery in Cambridge, Cambridgeshire, Newmarket, Huntingdon, Peterborough, Ely, Haverhill, Saffron Walden, Duxford, A10, M11 & A14 | Getting stranded on your way to or from London Stansted Airport... *(4 Paragraphs, updated with jump start keywords)* |
