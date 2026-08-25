@@ -25,6 +25,24 @@ const CambridgeDetailedContent = ({ onNavigate }) => {
 
   return (
     <div className="cambridge-detailed-container">
+      {/* Intro Copy Section */}
+      <section className="glass-panel description-section" style={{ padding: '30px', borderRadius: '16px', marginBottom: '24px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '0.95rem', lineHeight: '1.65', color: 'var(--text-muted)' }}>
+          <p>
+            Our professional Cambridge vehicle recovery service provides reliable 24/7 breakdown recovery and roadside assistance throughout Cambridge and Cambridgeshire. Whether you have broken down in Cambridge city centre, Cambridge Science Park, Addenbrooke’s Hospital, a university college, business park, residential area or on a major local route, our experienced recovery operators are ready to assist, including jump starts for suitable flat-battery situations.
+          </p>
+          <p>
+            We provide professional car recovery, van recovery and vehicle towing for a wide range of breakdown situations, including flat batteries, jump starts, punctures, mechanical faults, fuel problems, non-starting vehicles and accident recovery. Our modern recovery equipment allows us to transport vehicles safely to your home, local garage, dealership or preferred destination.
+          </p>
+          <p>
+            We also offer specialist recovery for prestige, luxury and low-profile vehicles, with careful loading and secure transportation.
+          </p>
+          <p>
+            If you are searching for Cambridge breakdown recovery, car recovery near me, vehicle recovery near me, jump start near me, 24 hour breakdown recovery or emergency roadside assistance, our professional team is available 24/7 to provide a fast, safe and dependable recovery service.
+          </p>
+        </div>
+      </section>
+
       {/* Services List Section */}
       <section className="services-section">
         <h2 className="section-title">Our Premium Roadside & Recovery Services</h2>

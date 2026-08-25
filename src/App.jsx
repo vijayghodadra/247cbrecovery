@@ -67,7 +67,7 @@ function App() {
         metaDescription.setAttribute('content', 'Fast, reliable 24/7 vehicle recovery, car recovery, van recovery, breakdown towing, and jump start services throughout Cambridgeshire and surrounding counties.');
       }
     } else if (currentPath === '/cambridge') {
-      document.title = '🚨 24/7 Premium Vehicle Recovery Services Cambridge';
+      document.title = 'Cambridge Vehicle Recovery | 24/7 Breakdown Recovery & Roadside Assistance';
       if (metaDescription) {
         metaDescription.setAttribute('content', "Professional vehicle recovery anywhere across Cambridge city and county. Science Park, Addenbrooke's, all university colleges, business parks and residential areas covered 24/7. Specialist care for prestige vehicles.");
       }
