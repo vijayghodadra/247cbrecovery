@@ -24,6 +24,7 @@ import { serviceAreas } from './data/serviceAreas';
 import { generateDynamicSeoPage } from './data/seoCities';
 import { SettingsContext } from './context/SettingsContext';
 import { MessageCircle } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 function App() {
@@ -164,6 +165,7 @@ function App() {
       >
         <MessageCircle size={32} />
       </a>
+      <Analytics />
     </div>
   );
 }
