@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { PhoneCall, ShieldCheck, Star, Activity, MapPin } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
 import priceTag from '../../images/Tagg.png';
+import truckImg from '../../images/recovery.jpeg';
 import './Hero.css';
 
 const Hero = () => {
@@ -65,6 +66,11 @@ const Hero = () => {
           <MapPin size={16} className="text-red" />
           <span>Nationwide UK</span>
         </div>
+      </div>
+
+      {/* Truck Image */}
+      <div className="hero-truck-image-container">
+        <img src={truckImg} alt="Vehicle Recovery Truck" className="hero-truck-img" />
       </div>
 
       <div className="hero-subtitle">

@@ -148,6 +148,23 @@
   align-self: stretch;
 }
 
+.hero-truck-image-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-truck-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
 /* =====================
    MOBILE (< 480px)
    ===================== */
@@ -179,6 +196,19 @@
   }
   .badge {
     font-size: 0.75rem;
+  }
+  .hero-truck-image-container {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .hero-truck-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
   }
   .hero-title-wrapper {
     flex-direction: column;
