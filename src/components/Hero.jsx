@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { PhoneCall, ShieldCheck, Star, Activity, MapPin } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
 import priceTag from '../../images/Tagg.png';
-import truckImg from '../../images/recovery.jpeg';
+import truckImg from '../../images/Recovery.png';
 import './Hero.css';
 
 const Hero = () => {
