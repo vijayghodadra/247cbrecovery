@@ -153,8 +153,8 @@
    ===================== */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: clamp(1.5rem, 7.5vw, 1.9rem);
-    letter-spacing: -0.3px;
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    letter-spacing: -0.2px;
   }
   .hero-actions {
     flex-direction: column;
@@ -187,6 +187,6 @@
   .hero-price-tag {
     width: 120px;
     align-self: flex-end;
-    margin-top: -30px;
+    margin-top: 0;
   }
 }
