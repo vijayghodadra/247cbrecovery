@@ -155,6 +155,7 @@
   .hero-title {
     font-size: clamp(1.2rem, 6vw, 1.6rem);
     letter-spacing: -0.2px;
+    line-height: 1.4;
   }
   .hero-actions {
     flex-direction: column;
@@ -187,6 +188,6 @@
   .hero-price-tag {
     width: 120px;
     align-self: flex-end;
-    margin-top: 0;
+    margin-top: -65px;
   }
 }

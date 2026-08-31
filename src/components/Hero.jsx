@@ -18,9 +18,9 @@ const Hero = () => {
       {/* Main Typography */}
       <div className="hero-title-wrapper">
         <h1 className="hero-title">
-          Car&nbsp;Recovery&nbsp;near&nbsp;me <br />
-          Van&nbsp;Recovery&nbsp;near&nbsp;me <br />
-          Towing&nbsp;service&nbsp;near&nbsp;me <br />
+          Car&nbsp;Recovery&nbsp;Near&nbsp;me <br />
+          Van&nbsp;Recovery&nbsp;Near&nbsp;me <br />
+          Towing&nbsp;service&nbsp;Near&nbsp;me <br />
           24/7&nbsp;vehicle&nbsp;recovery <br />
           <span className="text-gradient">Nationwide&nbsp;UK <br /> coverage</span>
         </h1>
