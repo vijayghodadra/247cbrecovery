@@ -180,9 +180,13 @@
     font-size: 0.75rem;
   }
   .hero-title-wrapper {
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
   .hero-price-tag {
-    width: 130px;
+    width: 120px;
+    align-self: flex-end;
+    margin-top: -30px;
   }
 }
