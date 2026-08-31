@@ -27,24 +27,6 @@ const Hero = () => {
         <img src={priceTag} alt="24/7 Vehicle recovery and breakdown assistance starting price" fetchPriority="high" className="hero-price-tag" />
       </div>
 
-      <div className="hero-subtitle">
-        <p>
-          We provide cheap, reliable and professional 24/7 emergency and roadside assistance, vehicle recovery and breakdown recovery services for cars, vans and other vehicles. Whether you have broken down on the roadside, been involved in an accident, or simply need your vehicle transported safely, our experienced team is here to help.
-        </p>
-        <p style={{ marginTop: '12px' }}>
-          Our services include vehicle recovery, breakdown recovery, accident recovery, mobile tyre services and jump starts, helping you get back on the road as quickly as possible. We also offer auction collections and garage collections, providing a convenient and reliable vehicle transportation service when you need it.
-        </p>
-        <p style={{ marginTop: '12px' }}>
-          For specialist vehicles, we provide classic car and special vehicle transport, taking extra care to ensure your valuable or unique vehicle is transported safely and securely.
-        </p>
-        <p style={{ marginTop: '12px' }}>
-          Whatever your vehicle recovery or transportation needs, you can rely on 247 CB Vehicle Recovery for a fast, professional and dependable service, available 24 hours a day, 7 days a week.
-        </p>
-        <span className="hero-subtitle-meta">
-          <strong>Nationwide UK Coverage</strong> · Avg ETA from 15-30 mins
-        </span>
-      </div>
-
       {/* Actions */}
       <div className="hero-actions">
         <a
@@ -83,6 +65,24 @@ const Hero = () => {
           <MapPin size={16} className="text-red" />
           <span>Nationwide UK</span>
         </div>
+      </div>
+
+      <div className="hero-subtitle">
+        <p>
+          We provide cheap, reliable and professional 24/7 emergency and roadside assistance, vehicle recovery and breakdown recovery services for cars, vans and other vehicles. Whether you have broken down on the roadside, been involved in an accident, or simply need your vehicle transported safely, our experienced team is here to help.
+        </p>
+        <p style={{ marginTop: '12px' }}>
+          Our services include vehicle recovery, breakdown recovery, accident recovery, mobile tyre services and jump starts, helping you get back on the road as quickly as possible. We also offer auction collections and garage collections, providing a convenient and reliable vehicle transportation service when you need it.
+        </p>
+        <p style={{ marginTop: '12px' }}>
+          For specialist vehicles, we provide classic car and special vehicle transport, taking extra care to ensure your valuable or unique vehicle is transported safely and securely.
+        </p>
+        <p style={{ marginTop: '12px' }}>
+          Whatever your vehicle recovery or transportation needs, you can rely on 247 CB Vehicle Recovery for a fast, professional and dependable service, available 24 hours a day, 7 days a week.
+        </p>
+        <span className="hero-subtitle-meta">
+          <strong>Nationwide UK Coverage</strong> · Avg ETA from 15-30 mins
+        </span>
       </div>
 
       {/* Stats Box */}
