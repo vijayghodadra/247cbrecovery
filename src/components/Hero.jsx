@@ -18,10 +18,11 @@ const Hero = () => {
       {/* Main Typography */}
       <div className="hero-title-wrapper">
         <h1 className="hero-title">
-          24/7 Vehicle Recovery <br />
-          <span className="text-gradient">Car Recovery</span> Breakdown Recovery <br />
-          Van Recovery <br />
-          <span className="text-gradient">Nationwide UK Coverage</span>
+          Car Recovery near me <br />
+          Van Recovery near me <br />
+          Towing service near me <br />
+          24/7 vehicle recovery <br />
+          <span className="text-gradient">Nationwide UK coverage</span>
         </h1>
         <img src={priceTag} alt="24/7 Vehicle recovery and breakdown assistance starting price" fetchPriority="high" className="hero-price-tag" />
       </div>
