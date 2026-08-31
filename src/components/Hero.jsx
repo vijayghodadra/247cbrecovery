@@ -18,11 +18,11 @@ const Hero = () => {
       {/* Main Typography */}
       <div className="hero-title-wrapper">
         <h1 className="hero-title">
-          Car Recovery near me <br />
-          Van Recovery near me <br />
-          Towing service near me <br />
-          24/7 vehicle recovery <br />
-          <span className="text-gradient">Nationwide UK coverage</span>
+          <span style={{ whiteSpace: 'nowrap' }}>Car Recovery near me</span> <br />
+          <span style={{ whiteSpace: 'nowrap' }}>Van Recovery near me</span> <br />
+          <span style={{ whiteSpace: 'nowrap' }}>Towing service near me</span> <br />
+          <span style={{ whiteSpace: 'nowrap' }}>24/7 vehicle recovery</span> <br />
+          <span className="text-gradient" style={{ whiteSpace: 'nowrap' }}>Nationwide UK coverage</span>
         </h1>
         <img src={priceTag} alt="24/7 Vehicle recovery and breakdown assistance starting price" fetchPriority="high" className="hero-price-tag" />
       </div>
