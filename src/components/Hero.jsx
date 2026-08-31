@@ -21,8 +21,8 @@ const Hero = () => {
           Car&nbsp;Recovery&nbsp;Near&nbsp;me <br />
           Van&nbsp;Recovery&nbsp;Near&nbsp;me <br />
           Towing&nbsp;service&nbsp;Near&nbsp;me <br />
-          24/7&nbsp;vehicle&nbsp;recovery <br />
-          <span className="text-gradient">Nationwide&nbsp;UK <br /> coverage</span>
+          24/7&nbsp;Vehicle&nbsp;Recovery <br />
+          <span className="text-gradient">Nationwide&nbsp;UK <br /> Coverage</span>
         </h1>
         <img src={priceTag} alt="24/7 Vehicle recovery and breakdown assistance starting price" fetchPriority="high" className="hero-price-tag" />
       </div>
