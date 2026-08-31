@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { PhoneCall, ShieldCheck, Star, Activity, MapPin } from 'lucide-react';
 import { SettingsContext } from '../context/SettingsContext';
 import priceTag from '../../images/Tagg.png';
-import truckImg from '../../images/Recovery.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -70,7 +69,7 @@ const Hero = () => {
 
       {/* Truck Image */}
       <div className="hero-truck-image-container">
-        <img src={truckImg} alt="Vehicle Recovery Truck" className="hero-truck-img" />
+        <img src="/why-truck.jpeg" alt="Vehicle Recovery Truck" className="hero-truck-img" />
       </div>
 
       <div className="hero-subtitle">
