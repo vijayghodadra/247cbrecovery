@@ -27,17 +27,43 @@
 
 /* Hero Title — fluid sizing */
 .hero-title {
-  font-size: clamp(1.7rem, 6vw, 3.2rem);
-  line-height: 1.15;
+  font-size: clamp(1.4rem, 5.5vw, 3.2rem);
+  line-height: 1.25;
   font-weight: 800;
   letter-spacing: -0.5px;
   overflow-wrap: break-word;
   hyphens: none;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-title-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.hero-title-icon {
+  color: #ff2d2d;
+  width: clamp(1.4rem, 4.5vw, 2.4rem);
+  height: clamp(1.4rem, 4.5vw, 2.4rem);
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(255, 45, 45, 0.3));
+}
+
+.hero-title-line-gradient {
+  font-size: clamp(1.8rem, 6.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-top: 6px;
+  letter-spacing: -0.5px;
 }
 .hero-title-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   position: relative;
@@ -45,22 +71,61 @@
 }
 
 .hero-price-tag {
-  width: clamp(150px, 24vw, 240px);
+  width: clamp(140px, 22vw, 220px);
   height: auto;
   flex-shrink: 0;
   transform: rotate(5deg);
-  animation: floatTag 3s ease-in-out infinite alternate;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  margin-top: 100px;
+  margin-right: -10px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.45));
+  animation: floatTag 3.5s ease-in-out infinite alternate;
 }
 
 @keyframes floatTag {
   0% {
-    transform: translateY(0) rotate(5deg);
+    transform: translateY(0) rotate(4deg);
   }
   100% {
-    transform: translateY(-6px) rotate(9deg);
+    transform: translateY(-6px) rotate(7deg);
   }
 }
+
+.hero-deer-tagline-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.hero-deer-img {
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+.hero-deer-divider {
+  width: 1px;
+  height: 54px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-deer-text h4 {
+  font-size: clamp(0.95rem, 2.8vw, 1.15rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+  line-height: 1.25;
+}
+
+.hero-deer-text p {
+  font-size: clamp(0.8rem, 2.4vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: 1.35;
+}
+
 .text-gradient { color: var(--primary-red); }
 
 .hero-subtitle {
@@ -100,21 +165,71 @@
 .text-red { color: #ff4d4d; }
 .text-yellow { color: #eab308; }
 
-/* Trust Badges */
-.trust-badges {
+/* Trust Badges Bar */
+.trust-badges-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 4px;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.badge {
+.trust-badges-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.trust-icon {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-text strong {
+  font-size: clamp(0.72rem, 2.2vw, 0.85rem);
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.trust-text span {
+  font-size: clamp(0.62rem, 1.8vw, 0.72rem);
+  color: #94a3b8;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.12);
+  align-self: center;
+}
+
+.trust-sub-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-top: 2px;
 }
 
 /* Stats Box */
@@ -211,13 +326,34 @@
     border-radius: 12px;
   }
   .hero-title-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    position: relative;
+    width: 100%;
   }
   .hero-price-tag {
     width: 120px;
-    align-self: flex-end;
-    margin-top: -65px;
+    position: absolute;
+    right: -4px;
+    top: 85px;
+  }
+  .hero-deer-tagline-box {
+    margin-top: 12px;
+    gap: 12px;
+  }
+  .hero-deer-img {
+    width: 110px;
+  }
+  .hero-deer-divider {
+    height: 44px;
+  }
+  .trust-badges-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .trust-badge-item {
+    min-width: 45%;
+  }
+  .trust-divider {
+    display: none;
   }
 }
